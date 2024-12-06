@@ -1,0 +1,288 @@
+.featured {
+    position: relative; 
+    background-color: #0f161e;
+    padding: 20px;
+    text-align: center; 
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%; 
+}
+
+.carousel-item {
+    max-height: 700px; /* Set a smaller max height for the carousel item */
+    overflow: hidden;   /* Ensure overflow is hidden */
+    display: flex;      /* Use flexbox to center the image */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.carousel-item img {
+    width: 100%;        
+    height: auto;       
+    max-height: 100%;   
+    object-fit: cover;  
+}
+
+.button-container {
+    margin-top: 10px; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.buy-now-button {
+    display: inline-block; /* Makes the anchor behave like a button */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #66c0f4; 
+    color: #ffffff; 
+    border: none; 
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    text-align: center; 
+    cursor: pointer; /* Change cursor to pointer */
+    font-size: 1rem; 
+}
+
+.buy-now-button:hover {
+    background-color: #55a0d4; /* Darker shade on hover */
+}
+
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0)),
+                url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/Header_1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+
+
+
+
+/*old code
+
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #1b2838;
+    color: #c7d5e0;
+    overflow-x: hidden;
+}
+
+/* Sticky Header */
+header {
+    background-color: #171a21;
+    padding: 10px 20px;  /* Reduced padding for the header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;  /* Reduced height of the header */
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #66c0f4;
+    text-decoration: none;
+    margin-right: 18px;
+}
+
+/* Menu Button */
+.menu-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+    color: #c7d5e0;
+}
+
+/* Category Box Styling */
+.category-box {
+    background-color: #171a21;
+    position: sticky;
+    top: 50px; /* Just below the reduced header */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.category-shortcut-bar a {
+    color: #c7d5e0;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #171a21;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.category-shortcut-bar a:hover {
+    background-color: #66c0f4;
+    color: #ffffff;
+}
+
+
+
+/* Menu Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #171a21;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1100;
+}
+
+nav a {
+    color: #c7d5e0;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #202c3a;
+    border-radius: 5px;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #66c0f4;
+    color: #ffffff;
+}
+
+nav.active {
+    transform: translateX(0);
+}
+
+/* Featured Section */
+.featured {
+    position: relative;
+    background-color: #0f161e;
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    width: 100%; 
+}
+
+.carousel-item {
+    max-height: 700px; 
+    overflow: hidden;   /* Ensure overflow is hidden */
+    display: flex;      /* Use flexbox to center the image */
+    justify-content: center; 
+    align-items: center; 
+}
+
+.carousel-item img {
+    width: 100%;        /* Set width to auto to maintain aspect ratio */
+    height: 100%;       /* Set height to fill the container */
+    max-height: 100%;   /* Ensure the image does not exceed the height of the carousel item */
+    object-fit: contain; /* Scale the image to fit within the container */
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 12;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Game Categories Section */
+.categories {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #0f161e;
+}
+
+.categories
+h2 {
+    color: #66c0f4;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category {
+    margin-bottom: 40px;
+}
+
+.category h3 {
+    color: #c7d5e0;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between tiles */
+}
+
+.game-tile {
+    background-color: #202c3a;
+    padding: 15px;
+    border-radius: 5px;
+    flex: 1 1 calc(25% - 15px); /* Adjust width to fit 4 items per row with space */
+    text-align: center;
+    color: #c7d5e0;
+}
+
+.small-image {
+    width: 500px;   
+    height: 330px;  
+    object-fit: cover; 
+}
+
+.game-tile:hover {
+    background-color: #66c0f4;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #171a21;
+    text-align: center;
+    padding: 10px 0;
+    color: #c7d5e0;
+}
